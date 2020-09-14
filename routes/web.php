@@ -38,6 +38,12 @@ Route::prefix('admin') // prefisso dell'url che sarà creato
   ->namespace('Admin') // si riferisce alla sottocartella nostra qui nel codice, in cui si trova il controller
   ->middleware('auth') // si riferisce al fatto che solo gli utenti loggati 
                          // possono accedere a questo tipo di route
+  ->name('admin.')
   ->group(function() {
     Route::resource('posts', 'PostController');
 });
+
+
+// idex/posts
+
+Route::get('/posts', 'PostController@index')->name('posts.index');
