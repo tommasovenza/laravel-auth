@@ -21,4 +21,18 @@ Route::get('/', function () {
 Auth::routes();
 
 // controller home
+// /home va a finire su homecontroller@index
+
+// se aggiungo qui sotto ->middleware('auth) è un po' un alternativa alla funzione in HomeController con 
+// __construct {middleware('auth');}
+
+// qui vado per singola route e non per controller intero.
 Route::get('/home', 'HomeController@index')->name('home');
+
+// l'utente loggato avrà i privilegi per poter svolgere le crud e quindi creare, modificare e cancellare dei post 
+// Route::prefix('admin')
+//     ->nemaspace('Admin')
+//     ->middleware('auth')
+//     ->group(function() {
+
+//     });
