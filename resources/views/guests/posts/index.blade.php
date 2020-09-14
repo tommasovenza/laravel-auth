@@ -11,7 +11,7 @@
               
                          <li>{{$post->title}}</li>
                          <li>{{ $post->content}}</li>
-                    
+                         <a href="{{route('posts.show', $post)}}">vedi post</a>   
                     @endforeach
                 </ul>
                

@@ -12,8 +12,12 @@
                 @foreach ($posts as $post)
                     <li> <strong>{{$post->title}}</strong> - di: {{ $post->user->name}} </li>
                     <li>{{ $post->content}}</li>
-          
+                    <a href="{{route('admin.posts.show', $post)}}">vedi dettaglio</a>
+
+                    
                 @endforeach
+
+                
             </ul>
         </div>
     </div>

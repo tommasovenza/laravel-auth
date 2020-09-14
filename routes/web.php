@@ -44,6 +44,10 @@ Route::prefix('admin') // prefisso dell'url che sarà creato
 });
 
 
-// idex/posts
+// index/posts
 
 Route::get('/posts', 'PostController@index')->name('posts.index');
+
+// show
+
+Route::get('/posts/{post}', 'PostController@show')->name('posts.show'); 
